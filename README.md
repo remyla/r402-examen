@@ -1,6 +1,6 @@
 # R4.02 - Examen
 
-Créez un fork de ce dépôt et récupérez le sur votre machine.
+Créez un fork de ce dépôt avec le nom r402-examen-nom-prenom, sur lequel vous travaillerez. Assurez-vous que ce dépôt est accessible à l'enseignant pour la correction sans divulguer vos réponses aux autres élèves. 
 
 ## 1 Validation CM
 
