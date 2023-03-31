@@ -1,7 +1,7 @@
 import java.math.BigDecimal;
 import java.util.Arrays;
 
-public class validation_TP1 {
+public class TP1 {
 
     /* Exercice 1: défauts, erreurs et défaillances
      *
@@ -24,14 +24,19 @@ public class validation_TP1 {
      * contient la valeur recherchée
      * @throws NullPointerException si <code>a == null</code>
      */
+    /*
+    Cette fonction calcule l'indice de la dernière occurrence de x dans le tableau a. Mais si on test avec la dernière valeur
+    du tableau, on obtient -1. Cela est du au fait que i commence à a.length - 2. On doit le mettre a.length -1. La défault logiciel est ici
+     */
     public static int indexOfLastOccurrence(int[] a, int x) {
-        for (int i = a.length - 2; i >= 0; i--) {
+        for (int i = a.length - 1; i >= 0; i--) {
             if (a[i] == x) {
                 return i;
             }
         }
         return -1;
     }
+
 
     /**
      * Retourne la moyenne des valeurs stockées dans le tableau.
@@ -40,15 +45,20 @@ public class validation_TP1 {
      * @return la moyenne des valeurs stockées, ou 0.0 si le tableau est vide
      * @throws NullPointerException si <code>a == null</code>
      */
+    /*
+    Ici on peut voir que le i < a.length - 1 est un premier défault. On doit rajouter un =. De plus
+    Si le résultat de la moyenne est un nombre décimal, on ne peut pas le stocker dans un int. Il faut donc utiliser un double au niveau
+    du return.
+     */
     public static double average(int[] a) {
         if (a.length == 0) {
             return 0.0;
         }
         int sum = 0;
-        for (int i = 0; i < a.length -1; i++) {
+        for (int i = 0; i <= a.length -1; i++) {
             sum += a[i];
         }
-        return sum / a.length;
+        return (double) sum / a.length;
     }
 
     /**
@@ -58,10 +68,14 @@ public class validation_TP1 {
      * @return le nombre d'entier impairs contenus dans le tableau
      * @throws NullPointerException si <code>a == null</code>
      */
+    /*
+    Ici on peut voir que si on insère des nombres négatifs dans le tableau, on obtient un résultat qui est faux.
+    On doit donc utiliser la fonction Math.abs pour avoir le nombre absolu est donc ne pas faire la différence entre -1 et 1 par exemple.
+     */
     public static int countOddElements(int[] a) {
         int res = 0;
         for (int i = 0; i < a.length; i++) {
-            if (a[i] % 2 == 1) {
+            if (Math.abs(a[i]) % 2 == 1) {
                 res++;
             }
         }
