@@ -8,7 +8,16 @@ public class validation_TP1 {
      * Pour chacune des méthodes indexOfLastOccurrence, average, et countOddElements:
      * 1) déterminez le défaut logiciel dans la méthode (si vous ne trouvez pas le défaut simplement en inspectant le
      *    code, écrivez des tests pour vous aider)
+     * Pour indexOfLastOccurrence
      * dans la condition de la boucle, a.length - 2 au lieu de a.length - 1, qui fait que la dernière valeur du tableau ne sera pas vérifié
+     *
+     * Pour average
+     * dans la boucle, on ne prend pas en compte la dernière valeur du tableau (a < a.length - 1 au lieu de a < a.length ou a <= a.length - 1)
+     * sum est un entier, et non un float ou un double, donc la division par a.length donnera forcément un entier
+     *
+     * Pour countOddElements
+     * dans la condition de la boucle, on ne prend pas en compte la dernière valeur du tableau (a < a.length au lieu de a <= a.length)
+     *
      * 2) écrivez un test qui n'exécute pas le défaut
      * 3) écrivez un test qui exécute le défaut, mais ne provoque pas de défaillance
      * 4) écrivez un test qui provoque une défaillance
