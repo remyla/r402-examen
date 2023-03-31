@@ -25,4 +25,26 @@ public class Client extends Person {
         return shoppingCart;
     }
 
+
+    /**
+     * Ajoute des produit au panier du client
+     */
+    public void addProductToShoppingCart(Multiset<Product> product) {
+        shoppingCart.addAll(product);
+    }
+
+    /**
+     * Vide le panier du client
+     */
+    public void emptyShoppingCart() {
+        shoppingCart.clear();
+    }
+
+    /**
+     * Ajoute un produit au panier
+     */
+    public void addProductToShoppingCart(Product product) {
+        shoppingCart.add(product);
+    }
+
 }
