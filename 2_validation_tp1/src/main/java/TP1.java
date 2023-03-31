@@ -1,7 +1,6 @@
-import java.math.BigDecimal;
-import java.util.Arrays;
+import static java.lang.Math.abs;
 
-public class validation_TP1 {
+public class TP1 {
 
     /* Exercice 1: défauts, erreurs et défaillances
      *
@@ -25,7 +24,7 @@ public class validation_TP1 {
      * @throws NullPointerException si <code>a == null</code>
      */
     public static int indexOfLastOccurrence(int[] a, int x) {
-        for (int i = a.length - 2; i >= 0; i--) {
+        for (int i = a.length -1; i >= 0; i--) {
             if (a[i] == x) {
                 return i;
             }
@@ -45,10 +44,10 @@ public class validation_TP1 {
             return 0.0;
         }
         int sum = 0;
-        for (int i = 0; i < a.length -1; i++) {
-            sum += a[i];
+        for (int j : a) {
+            sum += j;
         }
-        return sum / a.length;
+        return (float) sum / a.length;
     }
 
     /**
@@ -60,8 +59,8 @@ public class validation_TP1 {
      */
     public static int countOddElements(int[] a) {
         int res = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] % 2 == 1) {
+        for (int j : a) {
+            if (abs(j) % 2 == 1) {
                 res++;
             }
         }
