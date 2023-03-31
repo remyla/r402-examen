@@ -25,4 +25,78 @@ public class TP1Tests {
         assertArrayEquals(expected, a);
     }
 
+    @Test
+    public void indexOfLastOccurence_noError(){
+        int[] a = {3, 2, 1, 0, 5, 8, 5, 6, 2, 3 };
+        int expected = -1;
+
+        assertEquals(expected,TP1.indexOfLastOccurrence(a,9));
+    }
+
+    @Test
+    public void indexOfLastOccurence_errorNoFail(){
+        int[] a = {3, 2, 1, 0, 5, 8, 5, 6, 2, 3 };
+        int expected = 3;
+
+        assertEquals(expected,TP1.indexOfLastOccurrence(a,0));
+    }
+
+    @Test
+    public void indexOfLastOccurence_Fail(){
+        int[] a = {3, 2, 1, 0, 5, 8, 5, 6, 2, 3 };
+        int expected = 9;
+
+        assertEquals(expected,TP1.indexOfLastOccurrence(a,3));
+    }
+
+    @Test
+    public void average_noError(){
+        int[] a = {};
+        double expected = 0.0;
+
+        assertEquals(expected,TP1.average(a));
+    }
+
+    @Test
+    public void average_errorNoFail(){
+        int[] a = {0,0,0,0};
+        double expected = 0.0;
+
+        assertEquals(expected,TP1.average(a));
+    }
+
+    @Test
+    public void average_Fail(){
+        int[] a = {3, 2, 1};
+        double expected = 2.0;
+
+        assertEquals(expected,TP1.countOddElements(a));
+    }
+
+    @Test
+    public void countOddElements_noError(){
+        int[] a = {0,2,4,8};
+        int expected = 0;
+
+        assertEquals(expected,TP1.countOddElements(a));
+    }
+
+    @Test
+    public void countOddElements_errorNoFail(){
+        int[] a = {3,1,4,2,5};
+        int expected = 3;
+
+        assertEquals(expected,TP1.countOddElements(a));
+    }
+
+    @Test
+    public void countOddElements_Fail(){
+        int[] a = {3, 2, 1};
+        int expected = 2;
+
+        assertEquals(expected,TP1.countOddElements(a));
+    }
+    
+    
+
 }
