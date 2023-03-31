@@ -1,7 +1,7 @@
 import java.math.BigDecimal;
 import java.util.Arrays;
 
-public class validation_TP1 {
+public class TP1 {
 
     /* Exercice 1: défauts, erreurs et défaillances
      *
@@ -18,6 +18,8 @@ public class validation_TP1 {
      * Retourne la position de la dernière occurrence de la valeur x dans le tableau a, ou -1 si la valeur n'est pas
      * présente dans le tableau.
      *
+     * defaut: i est egal a la taille du tableau -2 au lieu de la taille -1
+     *
      * @param a le tableau où chercher la valeur
      * @param x la valeur recherchée
      * @return la plus grande position <code>i</code> telle que <code>a[i] == x</code>, ou -1 si aucune position ne
@@ -25,7 +27,7 @@ public class validation_TP1 {
      * @throws NullPointerException si <code>a == null</code>
      */
     public static int indexOfLastOccurrence(int[] a, int x) {
-        for (int i = a.length - 2; i >= 0; i--) {
+        for (int i = a.length - 1; i >= 0; i--) {
             if (a[i] == x) {
                 return i;
             }
@@ -36,6 +38,8 @@ public class validation_TP1 {
     /**
      * Retourne la moyenne des valeurs stockées dans le tableau.
      *
+     *  defaut: le i est strictement inferieur au lieu de inferieur ou egal
+     *
      * @param a le tableau contenant les valeurs
      * @return la moyenne des valeurs stockées, ou 0.0 si le tableau est vide
      * @throws NullPointerException si <code>a == null</code>
@@ -45,7 +49,7 @@ public class validation_TP1 {
             return 0.0;
         }
         int sum = 0;
-        for (int i = 0; i < a.length -1; i++) {
+        for (int i = 0; i <= a.length -1; i++) {
             sum += a[i];
         }
         return sum / a.length;
@@ -54,6 +58,8 @@ public class validation_TP1 {
     /**
      * Retourne le nombre d'entiers impairs contenus dans le tableau.
      *
+     *  defaut: ne compte pas les noùbre negatif
+     *
      * @param a le tableau contenant les valeurs
      * @return le nombre d'entier impairs contenus dans le tableau
      * @throws NullPointerException si <code>a == null</code>
@@ -61,7 +67,7 @@ public class validation_TP1 {
     public static int countOddElements(int[] a) {
         int res = 0;
         for (int i = 0; i < a.length; i++) {
-            if (a[i] % 2 == 1) {
+            if (a[i] % 2 == 1 || a[i] % 2 == -1) {
                 res++;
             }
         }
