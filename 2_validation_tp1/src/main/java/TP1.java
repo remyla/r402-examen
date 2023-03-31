@@ -1,7 +1,4 @@
-import java.math.BigDecimal;
-import java.util.Arrays;
-
-public class validation_TP1 {
+public class TP1 {
 
     /* Exercice 1: défauts, erreurs et défaillances
      *
