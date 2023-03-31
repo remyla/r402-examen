@@ -25,4 +25,31 @@ public class TP1Tests {
         assertArrayEquals(expected, a);
     }
 
+    @Test
+    public void testQuiNexecutePasLeDefaut() {
+        int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int x = 5;
+        int expected = 4;
+        int actual = validation_TP1.indexOfLastOccurrence(a, x);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testQuiExecuteLeDefautMaisNeProvoquePasDeDefaillance() {
+        int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int x = 11;
+        int expected = -1;
+        int actual = validation_TP1.indexOfLastOccurrence(a, x);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testQuiProvoqueUneDefaillance() {
+        int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int x = 10;
+        int expected = 9;
+        int actual = validation_TP1.indexOfLastOccurrence(a, x);
+        assertEquals(expected, actual);
+    }
+
 }

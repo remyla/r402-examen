@@ -8,6 +8,7 @@ public class validation_TP1 {
      * Pour chacune des méthodes indexOfLastOccurrence, average, et countOddElements:
      * 1) déterminez le défaut logiciel dans la méthode (si vous ne trouvez pas le défaut simplement en inspectant le
      *    code, écrivez des tests pour vous aider)
+     * dans la condition de la boucle, a.length - 2 au lieu de a.length - 1, qui fait que la dernière valeur du tableau ne sera pas vérifié
      * 2) écrivez un test qui n'exécute pas le défaut
      * 3) écrivez un test qui exécute le défaut, mais ne provoque pas de défaillance
      * 4) écrivez un test qui provoque une défaillance
