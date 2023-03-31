@@ -13,29 +13,27 @@ c) écriture de la spécification de la fonction
 d) amélioration du corps de la fonction
 e) écriture d'un autre test unitaire qui échoue
 
-Réponse: _ _ _ _ _
+Réponse : c b a e d
 
 ### Question 2
-Décrivez pour un logiciel ce qu'est:
+Décrivez pour un logiciel ce qu'est :
 
-* sa maintenance évolutive:
+* sa maintenance évolutive :
 
-
-
+Cela correspond au moment où on rajoute des nouvelles fonctionnalités pas présentes de base dans le cahier des charges.
 
 * sa maintenance corrective:
 
+Cela correspond au moment où on corrige des bugs, des erreurs de programmation, des erreurs de conception, etc.
 
+À quel moment peut-on écrire des nouveaux tests ?
 
-À quel moment peut-on écrire des nouveaux tests?
+* pour la maintenance évolutive :
 
-* pour la maintenance évolutive:
+On peut écrire des nouveaux tests pour la maintenance évolutive une fois que les spécifications sont prêtes et une fois le développement en cours.
 
+* pour la maintenance corrective :
 
-
-* pour la maintenance corrective:
-
-
-
+On peut écrire des nouveaux tests pour la maintenance corrective à partir du moment où le logiciel (ou les nouvelles fonctionnalités) est (sont) en production et déployé(s).
 
 ---
